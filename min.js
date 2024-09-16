@@ -37,6 +37,8 @@ async function addImage() {
   console.log(data);
   imagePlaceHolder.src = data.imageLink;
   removeButton.setAttribute('onclick', `removeImage(${data.id})`);
+    imageName.value = ""
+  ImageLink.value = ""
 }
 
 async function fetchImages() {
