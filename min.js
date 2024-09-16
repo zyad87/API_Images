@@ -12,7 +12,7 @@ async function addImage() {
     let imageLinkValue = imageLink.value.trim();
   
     if (imageNameValue === '' || imageLinkValue === '') {
-      alert('الرجاء التحقق بشكل صحيح');
+        alert('Please check correctly');
     }else{
         let url = 'https://66e80437b17821a9d9daf9ba.mockapi.io/Images';
         let nameImage = document.createElement('p');
@@ -26,11 +26,13 @@ async function addImage() {
         let imagePlaceHolder = document.createElement('img');
         imagePlaceHolder.src = imageLinkValue;
         nameImage.innerText = imageNameValue;
-        card.append(nameImage);
+
         card.append(imagePlaceHolder);
+        card.append(nameImage);
         card.append(removeButton);
+
         container.append(card);
-      
+
         let res = await fetch(url, {
           method: 'POST',
           body: JSON.stringify({
@@ -45,8 +47,6 @@ async function addImage() {
         console.log(data);
         imagePlaceHolder.src = data.imageLink;
         removeButton.setAttribute('onclick', `removeImage(${data.id})`);
-        
-        // إعادة تعيين الحقول
         imageName.value = "";
         imageLink.value = "";
     }
@@ -74,8 +74,8 @@ async function fetchImages() {
     let nameImage = document.createElement('p');
     nameImage.innerText = element.imageName;
 
-    card.append(nameImage);
     card.append(imagePlaceHolder);
+    card.append(nameImage);
     card.append(removeButton);
     container.append(card);
   });
