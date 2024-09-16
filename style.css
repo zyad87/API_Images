@@ -1,69 +1,110 @@
-nav {
-    width: 100vw;
-    height: 1rem;
-    margin: 1rem 0;
-  }
-  img {
-    width: 10rem;
-    height: 10rem;
-    margin: 1rem 0rem;
-  }
-  body {
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    background-color:aliceblue;
-  }
-  
-  .container {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100vw;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem 0;
+}
+
+.container {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-  }
-  
-  .card {
+}
+
+.card {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: 3px solid black;
-    padding: 0rem 1rem;
+    border: 3px dashed black;
+    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
     justify-content: center;
     align-items: center;
-  }
-  
-  .buttons {
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-  }
-  input,button{
+    margin-bottom: 1rem;
+}
+
+input, button {
     padding: 10px;
     border: none;
-  }
-  button{
-    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+}
 
-  }
-  .removeButton {
+button {
+    cursor: pointer;
+    background-color: #007BFF;
+    border: 0;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.removeButton {
     width: max-content;
     height: max-content;
     padding: 0.4rem 0.5rem;
-    border: 1px solid black;
+    border: 2px solid #a80000;
+    color: #a80000;
     border-radius: 4px;
     background-color: transparent;
     margin-bottom: 10px;
     cursor: pointer;
-    transition: all .3s ease;
-  }
-  .removeButton:hover {
-    background-color: red;
+    transition: all 0.3s ease;
+}
+
+.removeButton:hover {
+    background-color: #a80000;
     color: white;
-  }
+}
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    .card {
+        max-width: 100%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    input, button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
