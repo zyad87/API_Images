@@ -114,8 +114,14 @@ button:hover {
     input, button {
         font-size: 0.9rem;
         padding: 8px;
+        
     }
     .buttons {
         flex-direction: column;
+        
+    }
+    button{
+        width: 100%; /* جعل العناصر تمتد بعرض الحاوية */
+        max-width: 300px; /* تحديد أقصى عرض للعناصر */
     }
 }
