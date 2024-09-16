@@ -37,11 +37,13 @@ async function addImage() {
   console.log(data);
   imagePlaceHolder.src = data.imageLink;
   removeButton.setAttribute('onclick', `removeImage(${data.id})`);
+  imageName.value = ""
+  ImageLink.value = ""
 }
 
 async function fetchImages() {
   let url = `https://66e80437b17821a9d9daf9ba.mockapi.io/Images`;
-
+    container.innerHTML= ' '
   let res = await fetch(url);
   let data = await res.json();
   console.log(data);

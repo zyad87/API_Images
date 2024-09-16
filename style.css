@@ -46,7 +46,10 @@ nav {
     padding: 10px;
     border: none;
   }
-  
+  button{
+    cursor: pointer;
+
+  }
   .removeButton {
     width: max-content;
     height: max-content;
@@ -55,9 +58,12 @@ nav {
     border-radius: 4px;
     background-color: transparent;
     margin-bottom: 10px;
+    cursor: pointer;
     transition: all .3s ease;
   }
   .removeButton:hover {
     background-color: red;
     color: white;
   }
+
+
